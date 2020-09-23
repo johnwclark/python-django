@@ -2,10 +2,10 @@
 
 A sample Python Django application.
 
+I am using the sample Django app
+<https://docs.djangoproject.com/en/3.1/intro/tutorial01/>
+
 I am also going to build and deploy this using Docker.
-
-I am working off this as the base and adding the Docker parts
-
 <https://code.visualstudio.com/docs/containers/quickstart-python>
 
 ## Docker setup
@@ -17,3 +17,9 @@ docker run -it alpine /bin/ash
 ### RUN
 
 These are the commands needed to get the packages and dependencies on the VM for the project.
+
+### project setup
+
+django-admin startproject mysite
+cd mysite
+python manage.py runserver 8787
