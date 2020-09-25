@@ -14,12 +14,26 @@ Docker doesn't ship with bash, so either run ash or sh.
 
 docker run -it alpine /bin/ash
 
-### RUN
-
-These are the commands needed to get the packages and dependencies on the VM for the project.
-
 ### project setup
 
 django-admin startproject mysite
 cd mysite
 python manage.py runserver 8787
+
+### RUN
+
+These are the commands needed to get the packages and dependencies on the VM for the project.
+
+
+### Docker commands
+
+if a build is out of space use 
+docker system prune
+tags can have versions ie polls:1.0
+
+docker build --tag polls .
+docker run --publish 8787:8787 --detach --name ptest polls
+
+docker ps
+docker stop ptest
+docker rm ptest
