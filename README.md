@@ -20,9 +20,7 @@ django-admin startproject mysite
 cd mysite
 python manage.py runserver 8787
 
-### RUN
-
-These are the commands needed to get the packages and dependencies on the VM for the project.
+The dev work is then done inside that project directory.
 
 
 ### Docker commands
@@ -30,6 +28,9 @@ These are the commands needed to get the packages and dependencies on the VM for
 if a build is out of space use 
 docker system prune
 tags can have versions ie polls:1.0
+
+docker run polls [command]
+docker run polls ls -lR /opt/mysite/
 
 docker build --tag polls .
 docker run --publish 8787:8787 --detach --name ptest polls
